@@ -1,0 +1,28 @@
+1] Oracles are services that feed external (off-chain) data into the blockchain (on-chain) so that smart contracts can use real-world information.
+2] Ethereum smart contracts are deterministic — they only know about on-chain data (balances, transactions, contract state).
+But many use cases need real-world inputs like:
+
+The current ETH/USD price
+
+Sports match results
+
+Weather data (for crop insurance)
+
+Proof that a package was delivered
+
+Since Ethereum nodes can’t just “fetch” from the internet (that would break consensus), they rely on oracles.
+3]   How Oracles Work
+
+A smart contract on Ethereum requests data.
+
+The oracle service fetches the data from external APIs / IoT devices / other blockchains.
+
+The oracle posts that data on-chain, so the smart contract can use it. 
+
+4] Examples in Ethereum
+
+Chainlink → The most popular decentralized oracle network (price feeds, randomness, cross-chain bridges).
+
+Band Protocol, API3, Pyth → Other oracle providers.
+
+VRF (Verifiable Random Function) from Chainlink → Provides on-chain randomness (used in games, lotteries).
