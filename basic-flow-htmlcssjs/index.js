@@ -90,7 +90,7 @@ async function fund() {
   });
   // since we recieve array of addresses , we need to get the first one
 
-  await publicClient.simulateContract({
+  const { request } = await publicClient.simulateContract({
     address: contractAddress,
     abi: abi,
     functionName: "fund",
@@ -98,6 +98,9 @@ async function fund() {
     chain: currentChain, // get current chain
     value: parseEther(ethAmount),
   });
+  // since it returns an object .
+  const hash = await walletClient.writeContract(request);
+  console.log("hash", hash);
 }
 
 window.connect = connect;
