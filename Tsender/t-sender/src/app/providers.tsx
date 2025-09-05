@@ -1,5 +1,5 @@
 "use client";
-
+// think of it like dark theme , it should be applicable to all pages
 import { useState, type ReactNode } from "react";
 import config from "./rainbowkitconfig";
 import { WagmiProvider } from "wagmi";
