@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
+  const [amount, setAmount] = useState(0);
   return (
     <div>
       <div className="flex flex-col items-center justify-center mt-10 ">
@@ -47,14 +48,14 @@ const Form = () => {
                 id="Amoujnts"
                 type="text"
                 placeholder="100,200,300,.."
+                onChange={(e) => setAmount(Number(e.target.value))}
               />
-            
             </div>
-            <div className="border-2 rounded-xl border-gray-700 mb- text-xl font-semibold ">
-                Details:    
-              </div>
+            <div className="border-2 rounded-xl p-2  border-gray-700 mb- text-xl font-semibold ">
+            <h1 className="text-black">Details:</h1>
+              <h1 className="text-black">Amount (wei): {amount}</h1>
+            </div>
           </form>
-            
         </div>
       </div>
     </div>
